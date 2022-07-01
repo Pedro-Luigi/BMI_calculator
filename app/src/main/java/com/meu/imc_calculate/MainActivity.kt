@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setListeners()
+
+        //TODO - Colocar viewVinding e dar um novo visual.
     }
 
     fun setListeners() {
