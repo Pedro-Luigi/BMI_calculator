@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/imc"
+        android:textSize="48sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#FF5A00"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/informe_seu_peso"
+        style="@style/input_style"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        style="@style/input_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/informe_sua_altura"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editTextPeso"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/calcule"
+        android:backgroundTint="#46C366"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editTextTextPersonName2"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IMC_calculate</string>
+    <string name="imc">IMC</string>
+    <string name="informe_seu_peso">Peso (65.4Kg)</string>
+    <string name="calcule">Calcule</string>
+    <string name="informe_sua_altura">Altura (1.75m)</string>
+</resources>

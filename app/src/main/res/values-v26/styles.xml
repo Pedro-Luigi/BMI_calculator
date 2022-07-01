@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="input_style">
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textColorHint">#46C366</item>
+    </style>
+</resources>
