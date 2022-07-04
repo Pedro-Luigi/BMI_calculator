@@ -24,30 +24,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPeso"
+        android:id="@+id/et_peso"
+        style="@style/input_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/informe_seu_peso"
-        style="@style/input_style" />
+        android:inputType="numberDecimal" />
 
     <EditText
-        android:id="@+id/editTextAltura"
+        android:id="@+id/et_altura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/input_style"
         android:hint="@string/informe_sua_altura"
+        android:inputType="numberDecimal"
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="@string/calcule"
         android:backgroundTint="#46C366"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="@string/calcule" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="classificação:"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
         />
+
+    <TextView
+        android:id="@+id/classificacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
 
 
 </LinearLayout>

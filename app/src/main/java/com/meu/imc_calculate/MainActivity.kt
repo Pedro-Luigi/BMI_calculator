@@ -2,28 +2,29 @@ package com.meu.imc_calculate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.widget.doAfterTextChanged
-import androidx.core.widget.doOnTextChanged
-import kotlinx.android.synthetic.main.activity_main.*
+import com.meu.imc_calculate.databinding.ActivityMainBinding
 import java.text.DecimalFormat
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         setListeners()
 
         //TODO - Colocar viewVinding e dar um novo visual.
     }
 
     fun setListeners() {
-        editTextAltura.doAfterTextChanged { }
-        editTextPeso.doOnTextChanged { text, _, _, _ -> }
-        button.setOnClickListener {
+        binding.btnCalculate.setOnClickListener {
             cal(
-                editTextPeso.text.toString(),
-                editTextAltura.text.toString()
+                binding.etPeso.text.toString(),
+                binding.etAltura.text.toString()
             )
         }
     }
@@ -34,11 +35,11 @@ class MainActivity : AppCompatActivity() {
     ) {
         val peso = peso.toFloatOrNull()
         val altura = altura.toFloatOrNull()
-        val imc = peso?.div((altura?.times(altura!!)!!))
+        val imc = peso?.div((altura?.times(altura)!!))
         val form = DecimalFormat("#.##")
 
         if (peso != null && altura != null) {
-            val clas = when {
+            val classificacao = when {
                 imc!! < 18.5 -> "Abaixo do peso"
                 imc < 25 -> "Peso Normal"
                 imc < 30 -> "Sobrepeso"
@@ -47,7 +48,8 @@ class MainActivity : AppCompatActivity() {
                 else -> "Mórbida"
             }
 
-            titleIMC.text = "Seu IMC é de ${form.format(imc)}"
+            binding.titleIMC.text = "Seu IMC é de ${form.format(imc)}"
+            binding.classificacao.text = classificacao
         }
     }
 }
