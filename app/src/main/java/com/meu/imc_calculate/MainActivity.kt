@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 else -> "Mórbida"
             }
 
-            binding.titleIMC.text = "Seu IMC é de ${form.format(imc)}"
+            binding.titleIMC.text = "Seu IMC: ${form.format(imc)}"
             binding.classificacao.text = classificacao
         }
     }
