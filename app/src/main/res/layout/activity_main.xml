@@ -46,7 +46,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#46C366"
         android:gravity="center"
         android:inputType="numberDecimal"
         android:text="@string/calcule" />
