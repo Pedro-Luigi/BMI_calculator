@@ -1,5 +1,6 @@
 package com.meu.imc_calculate
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.meu.imc_calculate.databinding.ActivityMainBinding
@@ -16,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setListeners()
-
-        //TODO - Colocar viewVinding e dar um novo visual.
     }
 
     fun setListeners() {
@@ -50,6 +49,14 @@ class MainActivity : AppCompatActivity() {
 
             binding.titleIMC.text = "Seu IMC: ${form.format(imc)}"
             binding.classificacao.text = classificacao
+
+            when(classificacao) {
+                "Abaixo do peso" -> binding.titleIMC.setTextColor(Color.parseColor("#fdd835"))
+                "Peso Normal" ->  binding.titleIMC.setTextColor(Color.parseColor("#43a047"))
+                "Sobrepeso" -> binding.titleIMC.setTextColor(Color.parseColor("#fdd835"))
+                "Obesidade Grau I" -> binding.titleIMC.setTextColor(Color.parseColor("#f57f17"))
+                else -> binding.titleIMC.setTextColor(Color.parseColor("#f44336"))
+            }
         }
     }
 }
